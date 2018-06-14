@@ -8,5 +8,5 @@ const app = express()
 app.use('/', express.static('src'));
 // var process = process || {env:{PORT : 3000}};
 // var port = process.env.PORT;
-
-app.listen(process.env.PORT, () => console.log('Example app listening on port ' + process.env.PORT));
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log('Example app listening on port ' + PORT));
